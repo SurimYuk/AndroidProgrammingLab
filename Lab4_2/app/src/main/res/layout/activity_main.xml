@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <!--base area-->
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="#067ef5"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#f9f7f7"
+            android:textSize="35dp"
+            android:text="Base Area"/>
+
+        <!--button for opening sliding area-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/openPage"
+            android:text="OPEN PAGE"
+            android:layout_marginTop="170dp"
+            android:layout_gravity="right"/>
+    </LinearLayout>
+
+    <!--sliding area-->
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="#87ab2c"
+        android:orientation="vertical"
+        android:visibility="gone"><!--at first, sliding area is invisible-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#f9f7f7"
+            android:textSize="35dp"
+            android:text="Sliding Area"/>
+
+        <!--button for closing sliding area-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/closePage"
+            android:text="CLOSE PAGE"
+            android:layout_marginTop="170dp"
+            android:layout_gravity="right"/>
+    </LinearLayout>
+
+
+
+</FrameLayout>
