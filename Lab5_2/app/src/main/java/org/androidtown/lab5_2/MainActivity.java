@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         * show result in the TextView area
         * */
         protected void onPostExecute(Void aVoid){
-            textView2.setText(String.valueOf(factoResult));
+            textView2.setText("= " + String.valueOf(factoResult));
         }
     }
 }
