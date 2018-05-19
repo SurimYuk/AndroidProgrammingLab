@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--button for starting action-->
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
@@ -11,6 +12,7 @@
         android:layout_centerHorizontal="true"
         android:text="동작변경" />
 
+    <!--first image to change action-->
     <ImageView
         android:id="@+id/imageView1"
         android:src="@drawable/greenandroid"
@@ -19,6 +21,7 @@
         android:layout_below="@+id/button"
         android:layout_alignParentLeft="true" />
 
+    <!--second image to change action-->
     <ImageView
         android:id="@+id/imageView2"
         android:src="@drawable/greenandroid"
@@ -27,6 +30,7 @@
         android:layout_below="@+id/button"
         android:layout_alignParentRight="true" />
 
+    <!--space for show images' state-->
     <EditText
         android:id="@+id/editText"
         android:layout_width="wrap_content"
