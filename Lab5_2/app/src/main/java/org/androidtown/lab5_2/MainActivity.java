@@ -29,22 +29,33 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
+                //editText is a String type,
+                //so we have to change the type of editText into integer
                 input = Integer.parseInt(editText.getText().toString());
+
+                //Starts the FactoTask
                 new FactoTask().execute();
             }
         });
     }
 
+    //Use AsyncTask class
     private class FactoTask extends AsyncTask<Void, Integer, Void> {
         String progress = "";
 
         @Override
+        /*
+        * initially setup the TextView area
+        * */
         protected void onPreExecute(){
             textView1.setText("n n-1 n-2 ...");
             textView2.setText("= ?");
         }
 
         @Override
+        /*
+        * where background processing actually happens
+        * */
         protected Void doInBackground(Void... params){
             for(int i = input; i >= 1; i--){
                 try {
@@ -57,12 +68,19 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
+        /*
+        * update the progress value between operations
+        * */
         protected void onProgressUpdate(Integer... values){
+            //to show progress in the TextView, convert integer into string
             progress = progress + Integer.toString(values[0].intValue()) + " ";
             textView1.setText(progress);
         }
 
         @Override
+        /*
+        * show result in the TextView area
+        * */
         protected void onPostExecute(Void aVoid){
             textView2.setText(String.valueOf(factoResult));
         }
