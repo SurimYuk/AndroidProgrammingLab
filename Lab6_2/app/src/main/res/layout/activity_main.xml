@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:stretchColumns="*">
+
+    <TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_span="3"
+            android:text="Shared preference example"
+            android:textSize="20dp"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="20dp">
+        <TextView
+            android:text="학번"/>
+
+        <!--edit text area for writing and showing student number-->
+        <EditText
+            android:layout_span="2"
+            android:id="@+id/sn"
+            android:hint="..."/>
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="20dp">
+        <TextView
+            android:text="이름"/>
+
+        <!--edit text area for writing and showing student name-->
+        <EditText
+            android:layout_span="2"
+            android:id="@+id/name"
+            android:hint="..."/>
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="20dp">
+
+        <!--buttons for actions-->
+        <Button
+            android:id="@+id/readBtn"
+            android:text="불러오기"/>
+        <Button
+            android:id="@+id/saveBtn"
+            android:text="저장하기"/>
+        <Button
+            android:id="@+id/initBtn"
+            android:text="초기화"/>
+    </TableRow>
+
+
+</TableLayout>
