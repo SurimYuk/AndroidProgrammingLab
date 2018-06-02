@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Table for entering information-->
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:stretchColumns="3">
+
+        <TableRow>
+
+            <TextView android:text="이름: " />
+
+            <EditText
+                android:id="@+id/studentName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="3" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="학번: " />
+
+            <EditText
+                android:id="@+id/studentNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="3" />
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/table"
+        android:layout_marginLeft="101dp"
+        android:text="추가" />
+
+    <Button
+        android:id="@+id/deleteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/table"
+        android:layout_toRightOf="@+id/addBtn"
+        android:text="삭제" />
+
+    <!--ListView for showing student information-->
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addBtn" />
+
+</RelativeLayout>
