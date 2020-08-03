@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<TableLayout
+    android:id="@+id/table"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <TableRow>
+        <TextView
+            android:text="성명"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:layout_weight="1"/>
+        <!--TextView for showing received user's name-->
+        <TextView
+            android:id="@+id/name"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="20"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="성별"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:layout_weight="1"/>
+        <!--TextView for showing received user's gender-->
+        <TextView
+            android:id="@+id/gender"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="20"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="수신여부"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:layout_weight="1"/>
+        <!--TextView for showing received user's selection for reception method-->
+        <TextView
+            android:id="@+id/reception"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="20"/>
+    </TableRow>
+
+</TableLayout>
+    <!--Button for going back to previous page-->
+    <Button
+        android:id="@+id/back"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="이전"
+        android:layout_below="@+id/table"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>

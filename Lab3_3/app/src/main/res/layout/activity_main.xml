@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--Buttons for switching fragments-->
+        <Button
+            android:id="@+id/tab1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="TAB1" />
+        <Button
+            android:id="@+id/tab2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="TAB2" />
+    </LinearLayout>
+    <!--FrameLayout for overwriting fragments-->
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <!--insert first and second fragments-->
+        <fragment
+            android:id="@+id/firstFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="org.androidtown.myapplication.FirstFragment" />
+        <fragment
+            android:id="@+id/secondFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="org.androidtown.myapplication.SecondFragment" />
+    </FrameLayout>
+
+</LinearLayout>

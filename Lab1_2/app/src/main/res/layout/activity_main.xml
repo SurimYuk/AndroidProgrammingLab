@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.lab1_2.MainActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+        <!--"vertical" to place TableLayout and RelativeLayout vertically-->
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+            <!--We can extend first column through stretchColumns="1"-->
+
+            <TableRow>
+
+                <TextView android:text="Name" />
+
+                <EditText
+                    android:id="@+id/ediname"
+                    android:layout_span="3"
+                    android:hint="type your name"
+                    android:backgroundTint="#FF90FF" />
+                <!--3 columns the widget is allowed to expand through layout_span="3"-->
+            </TableRow>
+
+        </TableLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="CLEAR"/>
+
+            <Button
+                android:id="@+id/print"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/clear"
+                android:text="PRINT" />
+            <!--layout_toRightOf="@+id/clear" makes button print
+            placed on the right side of the button clear-->
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="contents"
+                android:layout_below="@id/clear"/>
+            <!--layout_below="@id/clear" makes text view content
+            placed below of the button clear-->
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
